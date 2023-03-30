@@ -22,37 +22,157 @@ a {
 }
 
 body {
-  margin: 0;
-  background-color: #111;
+  max-width: 1110px;
+  margin-left: 60px;
+  margin-right: 60px;
+  font-family: 'League Spartan', sans-serif;
+  background-color: rgb(255, 255, 255);
 }
-.container {
-  width: 100%;
-  height: 400px;
+
+.header {
+  width: 374px;
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  background-color: lightpink;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 60px;
+  gap: 30px;
+  background-image: url(../assets/images/bg-pattern-top-desktop.svg);
+  background-repeat: no-repeat;
 }
-/* Esto siempre en este orden, si va por encima del container, podría dar errror */
 @media screen and (min-width: 768px) {
-  .container {
+  .header {
+    width: 1110px;
     display: flex;
     flex-direction: row;
-    background-color: red;
   }
-  /* No hace falta repetir la misma propiedad ya que dentro, se sobreescribirá lo que se cambie */
 }
-.box {
-  width: 100px;
-  height: 200px;
-  background-color: aqua;
+.first {
+  display: column;
+  width: 445px;
+  height: 245px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.title {
+  position: relative;
+  top: -20px;
+  color: rgba(81, 32, 81, 1);
+  font-size: 55px;
+}
+.subtitle {
+  position: relative;
+  top: -25px;
+  color: rgba(146, 123, 145, 1);
+  font-size: 15px;
+}
+.valoration {
+  width: 327px;
+  height: 266px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 30px;
 }
 @media screen and (min-width: 768px) {
-  .box {
-    width: 500px;
-    background-color: rgb(221, 0, 255);
+  .valoration {
+    width: 540px;
+    height: 200px;
   }
 }
-.box:hover {
-  background: lightseagreen;
+.text {
+  width: 327px;
+  height: 78px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 20px;
+  color: rgba(81, 32, 81, 1);
+  background-color: rgba(247, 242, 247, 1);
+}
+@media screen and (min-width: 768px) {
+  .text {
+    width: 445px;
+    height: 56px;
+  }
+}
+
+.image {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .second {
+    position: relative;
+    left: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .third {
+    position: relative;
+    left: 100px;
+  }
+}
+.reviews {
+  width: 1110px;
+  height: 266px;
+  position: relative;
+  top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(../assets/images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .reviews {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 150px;
+  }
+}
+.card {
+  width: 350px;
+  height: 234px;
+  border-radius: 10px;
+  font-size: 17px;
+  background-color: rgba(81, 32, 81, 1);
+}
+.photo {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 32px;
+  left: 30px;
+  border-radius: 60%;
+}
+.name {
+  position: relative;
+  top: -25px;
+  left: 90px;
+  color: white;
+}
+.subname {
+  position: relative;
+  top: -40px;
+  left: 90px;
+  color: rgba(238, 105, 164, 1);
+}
+.comment {
+  position: relative;
+  top: -20px;
+  margin: 0 30px;
+  color: white;
+}
+.irene {
+  position: relative;
+  top: 15px;
+}
+.anne {
+  position: relative;
+  top: 32px;
 }
